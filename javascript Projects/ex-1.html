@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab UI</title>
+</head>
+<body>
+        <h1>Javascript</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, labore.</p>
+        <button>Button</button>
+
+        <script>
+            document.querySelector("button").onclick = hello;
+
+            function hello () {
+                var p = document.querySelector("p");
+                p.textContent = "hello js";
+                p.style.padding = " 20xp";
+                p.style.background = " skyblue";
+                p.style.border = " 2px solid darkblue";
+            }
+        </script>
+</body>
+</html>

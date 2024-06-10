@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function </title>
+</head>
+<body>
+        <script>
+            let data = [
+                {name:'Bob', age:22},
+                {name:'Alice', age:20},
+                {name:'Chris', age:18},
+                {name:'Dave', age:23},
+                {name:'Eve', age:24},
+            ];
+
+            console.log(data.map(user=>user.name));
+            console.log(data.filter(user=> user.age >= 20));
+            console.log(
+                data .filter (user=> user.age >= 20)
+                .map( user=>user.name)
+            );
+        </script>
+</body>
+</html>

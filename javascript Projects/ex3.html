@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+</head>
+    <style>
+        .wrap{
+            width: 1000px;
+            margin :40pxf auto;
+            position : relative;  
+        }
+        .wrap button {
+            position : absolute;
+            top: 41%;
+            font-size: 2em;
+            opacity: 0.5;
+            background: none;
+            border: 0 none;
+            color: white;
+        }
+        #prev { 
+            left: 20px;
+        }
+        #next {
+            right: 20px;
+        }
+        .box {
+            height: 250px;
+            color: white;
+            font-size: 3em;
+            text-align: center;
+            line-height: 250px;
+        }
+        #box1{ 
+            background: deeppink;
+        }
+        #box2{ 
+            display: none;
+            background: teal;
+
+        }
+        #box3 { 
+            display: none;
+            background: purple;
+        }
+
+    </style>
+<body>
+        <div class="wrap">
+            <button id="prev">&laquo</button>
+            <button id="next">&raquo</button>
+            <div class="box" id="box1">1</div>
+            <div class="box" id="box2">2</div>
+            <div class="box" id="box3">3</div>
+        </div>
+
+        <script>
+                document.querySelector("#prev").onclick= prev;
+                document.querySelector("#next").onclick= next;
+
+                var box=1;
+                function prev() {
+                    document.querySelector("#box" + box ).style.display = "none";
+                    box--;
+                    if(box < 1) box = 3;
+                    document.querySelector("#box" + box ).style.display = "block";
+                }
+
+                function next() {
+                    document.querySelector("#box" + box ).style.display = "none";
+                    box++;
+                    if(box > 3) box = 1;
+                    document.querySelector("#box" + box ).style.display = "block";
+                }
+
+        </script>
+</body>
+</html>
